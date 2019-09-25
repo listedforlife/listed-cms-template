@@ -1,5 +1,5 @@
 ---
-template: DefaultPage
+template: ArtistPage
 slug: test slug
 title: This is a test info page
 featuredImage: >-

@@ -13,7 +13,7 @@ export const DefaultPageTemplate = ({
   featuredImage,
   body
 }) => (
-  <main className="DefaultPage">
+  <main className="ArtistPage">
     <PageHeader
       title={title}
       subtitle={subtitle}
@@ -29,7 +29,7 @@ export const DefaultPageTemplate = ({
   </main>
 )
 
-const DefaultPage = ({ data: { page } }) => (
+const ArtistPage = ({ data: { page } }) => (
   <Layout
     meta={page.frontmatter.meta || false}
     title={page.frontmatter.title || false}
@@ -37,7 +37,7 @@ const DefaultPage = ({ data: { page } }) => (
     <DefaultPageTemplate {...page.frontmatter} body={page.html} />
   </Layout>
 )
-export default DefaultPage
+export default ArtistPage
 
 export const pageQuery = graphql`
   query DefaultPage($id: String!) {

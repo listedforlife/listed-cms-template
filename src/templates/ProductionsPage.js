@@ -10,7 +10,7 @@ import Gallery from '../components/Gallery'
 import Popup from '../components/Popup'
 
 // Export Template for use in CMS preview
-export const ComponentsPageTemplate = ({
+export const ProductionsPageTemplate = ({
   title,
   subtitle,
   featuredImage,
@@ -75,7 +75,7 @@ const ProductionsPage = ({ data: { page } }) => (
     meta={page.frontmatter.meta || false}
     title={page.frontmatter.title || false}
   >
-    <ComponentsPageTemplate {...page} {...page.frontmatter} body={page.html} />
+    <ProductionsPageTemplate {...page} {...page.frontmatter} body={page.html} />
   </Layout>
 )
 
