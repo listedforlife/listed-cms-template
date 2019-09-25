@@ -70,7 +70,7 @@ export const ComponentsPageTemplate = ({
   </main>
 )
 
-const ComponentsPage = ({ data: { page } }) => (
+const ProductionsPage = ({ data: { page } }) => (
   <Layout
     meta={page.frontmatter.meta || false}
     title={page.frontmatter.title || false}
@@ -79,10 +79,10 @@ const ComponentsPage = ({ data: { page } }) => (
   </Layout>
 )
 
-export default ComponentsPage
+export default ProductionsPage
 
 export const pageQuery = graphql`
-  query ComponentsPage($id: String!) {
+  query ProductionsPage($id: String!) {
     page: markdownRemark(id: { eq: $id }) {
       ...Meta
       ...Gallery
