@@ -26,7 +26,7 @@ export const ContactPageTemplate = ({
       subtitle={subtitle}
       backgroundImage={featuredImage}
     />
-    <section className="section Contact--Section1" style={{backgroundColor:'black'}}>
+    <section className="section Contact--Section1" style={{backgroundColor:'black', color:'white'}}>
       <div className="container Contact--Section1--Container ">
         <div>
           <Content source={body}  />
