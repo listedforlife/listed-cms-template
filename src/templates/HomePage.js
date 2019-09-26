@@ -97,7 +97,6 @@ export const HomePageTemplate = ({
 
 // Export Default BlogIndex for front-end
 const HomePage = ({ data: { page, posts, postCategories } }) => (
-  
   <Layout
     meta={page.frontmatter.meta || false}
     title={page.frontmatter.title || false}>

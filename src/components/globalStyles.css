@@ -81,7 +81,7 @@ code {
   font-size: 85%;
   padding: 0.15em 0;
   background: var(--lightGrey);
-  border-radius: 3px;
+  border-radius: 1px;
 }
 code:before,
 code:after {
@@ -106,13 +106,13 @@ blockquote {
 
 /* Utility Classes */
 .light {
-  background-color: var(--lightGrey);
+  background-color: black;
 }
 .white {
-  background-color: white;
+  background-color: rgb(0, 0, 0);
 }
 .dark {
-  background-color: var(--primary);
+  background-color: black;
   color: white;
 }
 .dark h1,

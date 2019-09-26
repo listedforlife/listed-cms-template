@@ -10,18 +10,4 @@ meta:
   title: 
 ---
 
-<span style="color:green">
-Listed Productions Bla bla bla bla.
-</span>
-
-View the [original intro page](https://listedproductions.com).
-
-# Features
-
-* **[Mailchimp](http://mailchimp.com)** and **[Uploadcare](https://uploadcare.com)** integrations
-* Fully responsive layout for mobile and widescreen browsing
-* Blog searching and paging functionality
-* Seamless image and content sliders
-* Instagram feed integration
-
-
+# Latest News
