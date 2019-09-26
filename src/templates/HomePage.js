@@ -2,10 +2,10 @@ import React from 'react'
 import { graphql } from 'gatsby'
 import { Location } from '@reach/router'
 import qs from 'qs'
+import Content from '../components/Content'
 
 import PageHeader from '../components/PageHeader'
 import PostSection from '../components/PostSection'
-import PostCategoriesNav from '../components/PostCategoriesNav'
 import Layout from '../components/Layout'
 
 /**
@@ -37,6 +37,7 @@ export const byCategory = (posts, title, contentType) => {
 // Export Template for use in CMS preview
 export const HomePageTemplate = ({
   title,
+  body,
   subtitle,
   featuredImage,
   posts = [],
@@ -44,7 +45,9 @@ export const HomePageTemplate = ({
   enableSearch = true,
   contentType
 }) => (
+
   <Location>
+
     {({ location }) => {
       let filteredPosts =
         posts && !!posts.length
@@ -66,16 +69,17 @@ export const HomePageTemplate = ({
           <PageHeader
             title={title}
             subtitle={subtitle}
+
             backgroundImage={featuredImage}
           />
 
-          {!!postCategories.length && (
-            <section className="section thin">
-              <div className="container">
-                <PostCategoriesNav enableSearch categories={postCategories} />
-              </div>
-            </section>
-          )}
+<section className="section">
+      <div className="container">
+        <Content source={body} />
+      </div>
+    </section>
+
+
 
           {!!posts.length && (
             <section className="section">
@@ -88,15 +92,18 @@ export const HomePageTemplate = ({
       )
     }}
   </Location>
+  
 )
 
 // Export Default BlogIndex for front-end
 const HomePage = ({ data: { page, posts, postCategories } }) => (
+  
   <Layout
     meta={page.frontmatter.meta || false}
-    title={page.frontmatter.title || false}
-  >
+    title={page.frontmatter.title || false}>
+
     <HomePageTemplate
+    body={page.html} 
       {...page}
       {...page.fields}
       {...page.frontmatter}
@@ -112,6 +119,7 @@ const HomePage = ({ data: { page, posts, postCategories } }) => (
       }))}
     />
   </Layout>
+  
 )
 
 export default HomePage
@@ -122,8 +130,21 @@ export const pageQuery = graphql`
   ## $id is processed via gatsby-node.js
   ## query name must be unique to this file
   query HomePage($id: String!) {
+
     page: markdownRemark(id: { eq: $id }) {
       ...Meta
+      html
+      frontmatter {
+        title
+        subtitle
+        featuredImage
+      }
+    }
+
+
+    page: markdownRemark(id: { eq: $id }) {
+      ...Meta
+      html
       fields {
         contentType
       }
@@ -174,3 +195,4 @@ export const pageQuery = graphql`
     }
   }
 `
+

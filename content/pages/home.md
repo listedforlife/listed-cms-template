@@ -1,7 +1,7 @@
 ---
 template: HomePage
 slug: ''
-title: 
+title:  
 featuredImage: 'https://ucarecdn.com/1ad727b2-5db5-41b9-a4db-05f26e34f273/'
 
 subtitle: 
@@ -18,9 +18,6 @@ View the [original intro page](https://listedproductions.com).
 
 # Features
 
-* **[Gatsby](https://gatsbyjs.org)** static site generator
-* **[Netlify CMS](https://github.com/netlify/netlify-cms)** for content management
-* Dynamic menus and forms
 * **[Mailchimp](http://mailchimp.com)** and **[Uploadcare](https://uploadcare.com)** integrations
 * Fully responsive layout for mobile and widescreen browsing
 * Blog searching and paging functionality
