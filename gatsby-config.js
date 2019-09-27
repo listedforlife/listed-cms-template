@@ -90,6 +90,21 @@ module.exports = {
               linkImagesToOriginal: false
             }
           },
+          {
+            resolve: `@raae/gatsby-remark-oembed`,
+            options: {
+              providers: {
+                settings: {
+                  Twitter: {
+                    theme: "dark" // Use the Twitter dark theme
+                  },
+                  Instagram: {
+                    hidecaption: true
+                  }
+                }
+              }
+            }
+          },
           `gatsby-remark-responsive-iframe`
         ]
       }
