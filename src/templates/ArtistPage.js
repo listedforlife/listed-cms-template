@@ -26,6 +26,8 @@ export const DefaultPageTemplate = ({
         <SVGIcon src="/images/calendar.svg" />
       </div>
     </section>
+
+      <div>this is a test</div>
   </main>
 )
 
