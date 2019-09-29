@@ -4,7 +4,7 @@ import './Footer.css'
 
 export default () => (
   <div>
-    <h2 className="taCenter">
+    <h2 className="taCenter" style={{fontSize:'19px'}}>
       <br>
       </br>
       Follow us{' '}
