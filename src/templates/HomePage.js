@@ -91,12 +91,14 @@ export const HomePageTemplate = ({
         </main>
       )
     }}
+    
   </Location>
   
 )
 
 // Export Default BlogIndex for front-end
 const HomePage = ({ data: { page, posts, postCategories } }) => (
+  
   <Layout
     meta={page.frontmatter.meta || false}
     title={page.frontmatter.title || false}>
@@ -116,7 +118,10 @@ const HomePage = ({ data: { page, posts, postCategories } }) => (
         ...post.node.frontmatter,
         ...post.node.fields
       }))}
+      
     />
+
+ <div><iframe title="listed-playlist" width="100%" height="300" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/657878880&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe></div>
   </Layout>
   
 )

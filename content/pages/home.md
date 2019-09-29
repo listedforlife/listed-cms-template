@@ -12,4 +12,3 @@ meta:
 
 # Latest News
 
-https://soundcloud.com/briancid/sets/brian-cid-cycles-ep-sk-supreme
