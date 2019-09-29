@@ -6,6 +6,7 @@
   justify-content: space-between;
   flex-wrap: wrap;
   align-items: stretch;
+  margin-top:-60px;
 }
 
 .PostSection button {
@@ -25,7 +26,8 @@
 
 .PostSection--Grid > * {
   width: calc(33.33% - 2rem);
-  margin-bottom: 4rem;
+  margin-bottom: 2rem;
+
 }
 
 @supports (display: grid) {
