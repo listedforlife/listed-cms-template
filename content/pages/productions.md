@@ -1,9 +1,9 @@
 ---
 template: ProductionsPage
 slug: productions
-title: Productions Page
+title: Productions 
 featuredImage: 'https://ucarecdn.com/df0dc650-6938-412f-aefb-2019d2349e13/'
-subtitle: This is the productions page subtitle.
+subtitle: 
 section1: >-
   ## Listed Productions
 

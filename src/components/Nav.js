@@ -88,6 +88,7 @@ export class Navigation extends Component {
           </div>
           <button
             className="Button-blank Nav--MenuButton"
+            style={{color:'white'}}
             onClick={this.handleMenuToggle}
           >
             {active ? <X /> : <Menu />}
