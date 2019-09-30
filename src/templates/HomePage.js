@@ -3,8 +3,6 @@ import { graphql } from 'gatsby'
 import { Location } from '@reach/router'
 import qs from 'qs'
 import Content from '../components/Content'
-
-import PageHeader from '../components/PageHeader'
 import PostSection from '../components/PostSection'
 import Layout from '../components/Layout'
 
@@ -66,12 +64,7 @@ export const HomePageTemplate = ({
 
       return (
         <main className="Blog">
-          <PageHeader
-            title={title}
-            subtitle={subtitle}
-
-            backgroundImage={featuredImage}
-          />
+   
 
 <section className="section">
       <div className="container">
@@ -101,17 +94,20 @@ const HomePage = ({ data: { page, posts, postCategories } }) => (
   <Layout
     meta={page.frontmatter.meta || false}
     title={page.frontmatter.title || false}>
+<div style={{paddingLeft:'45px', margin:'15px', marginBottom:'-80px', fontSize:'25px'}}> Latest News</div>
 
     <HomePageTemplate
-    body={page.html} 
+
       {...page}
       {...page.fields}
       {...page.frontmatter}
+      
       posts={posts.edges.map(post => ({
         ...post.node,
         ...post.node.frontmatter,
         ...post.node.fields
       }))}
+
       postCategories={postCategories.edges.map(post => ({
         ...post.node,
         ...post.node.frontmatter,
@@ -119,7 +115,11 @@ const HomePage = ({ data: { page, posts, postCategories } }) => (
       }))}
       
     />
-<div style={{paddingLeft:'58px',fontSize:'23px'}}> Listed Playlist Vol #1</div>
+    <div style={{textAlign:'center'}}>
+      
+      <HomePageTemplate       body={page.html} 
+></HomePageTemplate></div>
+<div style={{paddingLeft:'45px',fontSize:'25px'}}> Listed Playlist Vol #1</div>
 <br></br>
  <div><iframe title="listed-playlist" width="100%" height="300" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/657878880&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe></div>
   </Layout>
@@ -134,17 +134,6 @@ export const pageQuery = graphql`
   ## $id is processed via gatsby-node.js
   ## query name must be unique to this file
   query HomePage($id: String!) {
-
-    page: markdownRemark(id: { eq: $id }) {
-      ...Meta
-      html
-      frontmatter {
-        title
-        subtitle
-        featuredImage
-      }
-    }
-
 
     page: markdownRemark(id: { eq: $id }) {
       ...Meta

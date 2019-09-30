@@ -26,6 +26,7 @@ videoTitle: Also background videos, with poster image & title overlay.
 accordion:
   - description: Taciti lorem tempor quam vestibulum dis habitasse
     title: Taciti lorem
+    featuredImage: 'https://ucarecdn.com/df0dc650-6938-412f-aefb-2019d2349e13/'
   - description: Taciti lorem tempor quam vestibulum dis habitasse
     title: Taciti lorem
   - description: Taciti lorem tempor quam vestibulum dis habitasse
