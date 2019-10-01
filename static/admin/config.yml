@@ -17,8 +17,8 @@ media_library:
 
 collections: # A list of collections the CMS should be able to edit
 
-    - name: "blog2"
-    label: "Blog2"
+  - name: "blogtwo"
+    label: "Blogtwo"
     folder: "content/blog"
     create: true
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
