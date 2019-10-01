@@ -24,7 +24,7 @@ collections: # A list of collections the CMS should be able to edit
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
     editor:
      preview: false
-         files:
+    files:
       - file: 'content/blog/blogtest.md'
         label: 'blogtwo'
         name: 'blog-two'
