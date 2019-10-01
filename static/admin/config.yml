@@ -17,11 +17,8 @@ media_library:
 
 collections: # A list of collections the CMS should be able to edit
 
-  - name: "blogtwo"
-    label: "Blogtwo"
-    folder: "content/blog"
-    create: true
-    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+  - label: "Sitewide Options"
+    name: options
     editor:
       preview: false
     files:
@@ -316,8 +313,7 @@ collections: # A list of collections the CMS should be able to edit
       - {label: URL, name: url, widget: string}
       - label: "Item Type"
         name: itemType
-        widget: select
-        options: ["Link", "Button"]
+        widget: button
       - { label: Template, name: template, widget: hidden, default: SinglePost }
       - { label: Title, name: title, widget: string }
       - label: 'Status'
