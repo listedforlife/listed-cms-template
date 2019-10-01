@@ -17,20 +17,14 @@ media_library:
 
 collections: # A list of collections the CMS should be able to edit
 
-  - label: "Sitewide Options"
-    name: options
+    - name: "blog2"
+    label: "Blog2"
+    folder: "content/blog"
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
     editor:
-      preview: false
-    files:
-      - label: "Navigation Menu"
-        name: nav
-        file: "_data/nav.yml"
-        fields:
-          - label: "Nav Items"
-            label_singular: "Nav Item"
-            name: topLevelItems
-            widget: list
-            fields:
+     preview: false
+    fields:
               - {label: "Display Text", name: displayText, widget: string}
               - {label: URL, name: url, widget: string}
               - label: "Item Type"
