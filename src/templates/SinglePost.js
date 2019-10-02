@@ -15,7 +15,7 @@ export const SinglePostTemplate = ({
   nextPostURL,
   atURL,
   prevPostURL,
-  categories = []
+  categories = [],
 }) => (
   <main>
     <article
@@ -60,6 +60,7 @@ export const SinglePostTemplate = ({
               {title}
             </h1>
           )}
+        
 
 {atURL && (
             <h1 style={{color:'white'}}>
@@ -77,9 +78,12 @@ export const SinglePostTemplate = ({
                 className="SinglePost--Pagination--Link prev"
                 to={prevPostURL}
               >
+              
                 Previous Post
               </Link>
+              
             )}
+            
             {nextPostURL && (
               <Link
                 className="SinglePost--Pagination--Link next"
@@ -88,6 +92,7 @@ export const SinglePostTemplate = ({
                 Next Post
               </Link>
             )}
+
           </div>
         </div>
       </div>
@@ -101,16 +106,20 @@ const SinglePost = ({ data: { post, allPosts } }) => {
   return (
     <Layout
       meta={post.frontmatter.meta || false}
-      title={post.frontmatter.excerpt || false}
+      title={post.frontmatter.url || false}
       atURL={post.frontmatter.url || false}
     >
+                  
       <SinglePostTemplate
         {...post}
         {...post.frontmatter}
         body={post.html}
+
         nextPostURL={_get(thisEdge, 'next.fields.slug')}
         prevPostURL={_get(thisEdge, 'previous.fields.slug')}
       />
+      <button onClick={post.frontmatter.excerpt}>download link</button>
+      <a>{post.frontmatter.url}</a>
     </Layout>
   )
 }
