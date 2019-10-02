@@ -13,7 +13,7 @@ export const SinglePostTemplate = ({
   date,
   body,
   nextPostURL,
-  URL,
+  atURL,
   prevPostURL,
   categories = []
 }) => (
@@ -61,9 +61,9 @@ export const SinglePostTemplate = ({
             </h1>
           )}
 
-{URL && (
+{atURL && (
             <h1 style={{color:'white'}}>
-              {URL}
+              {atURL}
             </h1>
           )}
 
@@ -101,8 +101,8 @@ const SinglePost = ({ data: { post, allPosts } }) => {
   return (
     <Layout
       meta={post.frontmatter.meta || false}
-      title={post.frontmatter.url || false}
-      URL={post.frontmatter.url || false}
+      title={post.frontmatter.excerpt || false}
+      atURL={post.frontmatter.url || false}
     >
       <SinglePostTemplate
         {...post}
@@ -133,6 +133,7 @@ export const pageQuery = graphql`
         template
         subtitle
         date
+        excerpt
         categories {
           category
         }
@@ -145,6 +146,7 @@ export const pageQuery = graphql`
     ) {
       edges {
         node {
+          excerpt
           id
         }
         next {
