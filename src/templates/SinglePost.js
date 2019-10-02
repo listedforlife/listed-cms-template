@@ -53,7 +53,7 @@ export const SinglePostTemplate = ({
               </Fragment>
             )}
           </div>
-
+            
           {title && (
             <h1 className="SinglePost--Title" itemProp="title">
               {title}
