@@ -17,7 +17,7 @@ media_library:
 
 collections: # A list of collections the CMS should be able to edit
 
-  - label: "Sitewide Options"
+  - label: "change it"
     name: options
     editor:
       preview: false
@@ -331,7 +331,7 @@ collections: # A list of collections the CMS should be able to edit
         }
       - { label: excerpt, name: excerpt, widget: text }
       - { label: Content, name: body, widget: markdown }
-      - label: 'Categories'
+      - label: 'poop'
         name: 'categories'
         widget: 'list'
         required: false
