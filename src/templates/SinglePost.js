@@ -13,6 +13,7 @@ export const SinglePostTemplate = ({
   date,
   body,
   nextPostURL,
+  URL,
   prevPostURL,
   categories = []
 }) => (
@@ -60,6 +61,12 @@ export const SinglePostTemplate = ({
             </h1>
           )}
 
+{URL && (
+            <h1 style={{color:'white'}}>
+              {URL}
+            </h1>
+          )}
+
           <div className="SinglePost--InnerContent">
             <Content source={body} />
           </div>
@@ -94,7 +101,8 @@ const SinglePost = ({ data: { post, allPosts } }) => {
   return (
     <Layout
       meta={post.frontmatter.meta || false}
-      title={post.frontmatter.title || false}
+      title={post.frontmatter.url || false}
+      URL={post.frontmatter.url || false}
     >
       <SinglePostTemplate
         {...post}
@@ -120,6 +128,7 @@ export const pageQuery = graphql`
       html
       id
       frontmatter {
+        url
         title
         template
         subtitle
