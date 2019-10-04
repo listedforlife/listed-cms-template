@@ -4,7 +4,7 @@ import { Link } from 'gatsby'
 import Image from './Image'
 import './ArtistCard.css'
 
-const PostCard = ({
+const ArtistCard = ({
   featuredImage,
   title,
   excerpt,
@@ -29,4 +29,4 @@ const PostCard = ({
   </Link>
 )
 
-export default PostCard
+export default ArtistCard
