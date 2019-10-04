@@ -8,6 +8,8 @@ const ArtistCard = ({
   featuredImage,
   title,
   excerpt,
+  bio,
+  numba,
   slug,
   categories = [],
   className = '',
@@ -20,11 +22,13 @@ const ArtistCard = ({
       </div>
     )}
     <div className="ArtistCard--Content">
+      asdgdsa this should be being pulled
       {title && <h3 className="ArtistCard--Title">{title}</h3>}
       <div className="ArtistCard--Category">
         {categories && categories.map(cat => cat.category).join(', ')}
       </div>
       {excerpt && <div className="ArtistCard--Excerpt">{excerpt}</div>}
+      {bio && <div className="ArtistCard--Excerpt">{bio}</div>}
     </div>
   </Link>
 )

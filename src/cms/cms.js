@@ -24,15 +24,18 @@ if (
 CMS.registerPreviewTemplate('home-page', ({ entry }) => (
   <HomePageTemplate {...entry.toJS().data} />
 ))
+
+CMS.registerPreviewTemplate('artist-page', ({ entry }) => (
+  <DefaultPageTemplate {...entry.toJS().data} />
+))
+
 CMS.registerPreviewTemplate('productions-page', ({ entry }) => (
   <ProductionsPageTemplate {...entry.toJS().data} />
 ))
 CMS.registerPreviewTemplate('contact-page', ({ entry }) => (
   <ContactPageTemplate {...entry.toJS().data} />
 ))
-CMS.registerPreviewTemplate('infoPages', ({ entry }) => (
-  <DefaultPageTemplate {...entry.toJS().data} />
-))
+
 CMS.registerPreviewTemplate('blog-page', ({ entry }) => (
   <BlogIndexTemplate {...entry.toJS().data} />
 ))

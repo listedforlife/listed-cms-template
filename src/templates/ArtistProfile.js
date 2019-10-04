@@ -12,6 +12,9 @@ export const ArtistProfileTemplate = ({
   title,
   date,
   body,
+  bio,
+  numba,
+  artist,
   nextPostURL,
   atURL,
   prevPostURL,
@@ -61,13 +64,6 @@ export const ArtistProfileTemplate = ({
             </h1>
           )}
         
-
-{atURL && (
-            <h1 style={{color:'white'}}>
-              {atURL}
-            </h1>
-          )}
-
           <div className="ArtistProfile--InnerContent">
             <Content source={body} />
           </div>
@@ -136,8 +132,9 @@ export const pageQuery = graphql`
       html
       id
       frontmatter {
-        url
         title
+        bio
+        upcomingShows
         template
         subtitle
         date
@@ -149,7 +146,7 @@ export const pageQuery = graphql`
     }
 
     allPosts: allMarkdownRemark(
-      filter: { fields: { contentType: { eq: "posts" } } }
+      filter: { fields: { contentType: { eq: "artistProfiles" } } }
       sort: { order: DESC, fields: [frontmatter___date] }
     ) {
       edges {
@@ -163,6 +160,8 @@ export const pageQuery = graphql`
           }
           frontmatter {
             title
+            bio
+            upcomingShows
           }
         }
         previous {

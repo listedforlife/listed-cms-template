@@ -1,12 +1,14 @@
 import React from 'react'
 
 import ArtistCard from '../components/ArtistCard'
-import './ArtisttSection.css'
+import './ArtistSection.css'
 
 class ArtistSection extends React.Component {
   static defaultProps = {
-    posts: [],
+    artistProfiles: [],
     title: '',
+    excerpt: '',
+    bio: '',
     limit: 12,
     showLoadMore: true,
     loadMoreTitle: 'Load More',
@@ -23,9 +25,9 @@ class ArtistSection extends React.Component {
     }))
 
   render() {
-    const { posts, title, showLoadMore, loadMoreTitle } = this.props,
+    const { artistProfiles, title, showLoadMore, loadMoreTitle } = this.props,
       { limit } = this.state,
-      visiblePosts = posts.slice(0, limit || posts.length)
+      visiblePosts = artistProfiles.slice(0, limit || artistProfiles.length)
 
     return (
       <div className="ArtistSection">
@@ -37,7 +39,7 @@ class ArtistSection extends React.Component {
             ))}
           </div>
         )}
-        {showLoadMore && visiblePosts.length < posts.length && (
+        {showLoadMore && visiblePosts.length < artistProfiles.length && (
           <div className="taCenter">
             <button className="button" onClick={this.increaseLimit}>
               {loadMoreTitle}
