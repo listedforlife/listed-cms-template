@@ -8,6 +8,7 @@ import { ContactPageTemplate } from '../templates/ContactPage'
 import { DefaultPageTemplate } from '../templates/ArtistPage'
 import { BlogIndexTemplate } from '../templates/BlogIndex'
 import { SinglePostTemplate } from '../templates/SinglePost'
+import { ArtistProfileTemplate } from '../templates/ArtistProfile'
 
 if (
   window.location.hostname === 'localhost' &&
@@ -37,4 +38,8 @@ CMS.registerPreviewTemplate('blog-page', ({ entry }) => (
 ))
 CMS.registerPreviewTemplate('posts', ({ entry }) => (
   <SinglePostTemplate {...entry.toJS().data} />
+))
+
+CMS.registerPreviewTemplate('artistprofiles', ({ entry }) => (
+  <ArtistProfileTemplate {...entry.toJS().data} />
 ))

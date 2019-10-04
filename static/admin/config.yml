@@ -317,6 +317,7 @@ collections: # A list of collections the CMS should be able to edit
         options: ["Link", "Button"]
       - { label: Template, name: template, widget: hidden, default: SinglePost }
       - { label: Title, name: title, widget: string }
+
       - label: 'Status'
         name: 'status'
         widget: 'select'
@@ -430,4 +431,43 @@ collections: # A list of collections the CMS should be able to edit
               widget: string,
               required: false,
             }
+
+  - name: artistprofiles
+    label: Artist Profiles
+    editor:
+      preview: true
+    folder: content/posts
+    slug: '{{year}}-{{month}}-{{day}}-{{slug}}'
+    create: true # Allow users to create new documents in this collection
+    fields: # The fields each document in this collection have
+      - { label: Template, name: template, widget: hidden, default: ArtistProfile }
+      - { label: Artist Name, name: "artist", widget: string }
+      - {
+          label: Featured Image,
+          name: featuredImage,
+          widget: image,
+          required: false,
+        }
+      - { label: Upcoming Shows, name: upcomingShows, widget: text }
+      - { label: Bio, name: bio, widget: markdown }
+      
+      - label: 'Meta'
+        required: false
+        name: 'meta'
+        widget: 'object'
+        fields:
+          - { label: Title, name: title, widget: string, required: false }
+          - {
+              label: Description,
+              name: description,
+              widget: text,
+              required: false,
+            }
+          - {
+              label: Canonical Link,
+              name: canonicalLink,
+              widget: string,
+              required: false,
+            }
+          - { label: Noindex, name: noindex, widget: boolean, required: false }
 
