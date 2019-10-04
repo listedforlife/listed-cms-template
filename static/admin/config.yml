@@ -436,12 +436,12 @@ collections: # A list of collections the CMS should be able to edit
     label: Artist Profiles
     editor:
       preview: true
-    folder: content/posts
+    folder: content/artistProfiles
     slug: '{{year}}-{{month}}-{{day}}-{{slug}}'
     create: true # Allow users to create new documents in this collection
     fields: # The fields each document in this collection have
       - { label: Template, name: template, widget: hidden, default: ArtistProfile }
-      - { label: Artist Name, name: "artist", widget: string }
+      - { label: Artist Name, name: title, widget: string }
       - {
           label: Featured Image,
           name: featuredImage,
