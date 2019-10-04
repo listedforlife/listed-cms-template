@@ -159,15 +159,15 @@ collections: # A list of collections the CMS should be able to edit
                   required: false,
                 }
 
-      - file: 'content/pages/componets.md'
-        label: 'Componets Page'
-        name: 'componets-page'
+      - file: 'content/pages/productions.md'
+        label: 'Productions Page'
+        name: 'productions-page'
         fields:
           - {
               label: Template,
               name: template,
               widget: hidden,
-              default: ComponetsPage,
+              default: ProductionsPage,
             }
           - { label: Slug, name: slug, widget: hidden, default: 'componets' }
           - { label: Title, name: title, widget: string }
