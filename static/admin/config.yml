@@ -17,7 +17,7 @@ media_library:
 
 collections: # A list of collections the CMS should be able to edit
 
-  - label: "change it"
+  - label: "test collection"
     name: options
     editor:
       preview: false
