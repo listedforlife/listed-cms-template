@@ -12,6 +12,7 @@ export const ArtistPostTemplate = ({
   title,
   date,
   body,
+  upcomingshows,
   nextPostURL,
   atURL,
   prevPostURL,
@@ -24,8 +25,8 @@ export const ArtistPostTemplate = ({
       itemType="http://schema.org/BlogPosting"
     >
       <div className="container skinny">
-        <Link className="ArtistPost--BackButton" to="/blog/">
-          <ChevronLeft /> BACK
+        <Link className="ArtistPost--BackButton" to="/artists/">
+          <ChevronLeft /> BACKasd
         </Link>
         <div className="ArtistPost--Content relative">
           <div className="ArtistPost--Meta">
@@ -118,7 +119,7 @@ const ArtistPost = ({ data: { post, allPosts } }) => {
         nextPostURL={_get(thisEdge, 'next.fields.slug')}
         prevPostURL={_get(thisEdge, 'previous.fields.slug')}
       />
-      <button  onClick={post.frontmatter.excerpt}>download link</button>
+      <button  onClick={post.frontmatter.excerpt}>downlohhad link</button>
       <a>{post.frontmatter.url}</a>
     </Layout>
   )
@@ -137,11 +138,9 @@ export const pageQuery = graphql`
       html
       id
       frontmatter {
-        url
         title
         template
         subtitle
-        date
         excerpt
         categories {
           category

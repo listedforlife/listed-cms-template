@@ -3,9 +3,8 @@ import { graphql } from 'gatsby'
 import { Location } from '@reach/router'
 import qs from 'qs'
 
-import PageHeader from '../components/PageHeader'
 import ArtistSection from '../components/ArtistSection'
-import PostCategoriesNav from '../components/PostCategoriesNav'
+import ArtistCategoriesNav from '../components/ArtistCategoriesNav'
 import Layout from '../components/Layout'
 
 /**
@@ -67,7 +66,7 @@ export const ArtistPageTemplate = ({
           {!!postCategories2.length && (
             <section className="section thin">
               <div className="container">
-                <PostCategoriesNav enableSearch categories={postCategories2} />
+                <ArtistCategoriesNav enableSearch categories={postCategories2} />
               </div>
             </section>
           )}

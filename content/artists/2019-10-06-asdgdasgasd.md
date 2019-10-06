@@ -2,7 +2,7 @@
 displayText: a
 url: sadgasdg
 itemType: Link
-template: SinglePost
+template: ArtistPost
 title: asdgdasgasd
 status: Published
 date: 2019-10-06T19:20:20.849Z

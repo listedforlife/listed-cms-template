@@ -1,5 +1,5 @@
 ---
-template: SinglePost
+template: ArtistPost
 title: sadgasdgdasgsdg
 featuredImage: 'https://ucarecdn.com/895426fd-39d7-4349-981f-1699c3ee410c/'
 upcomingshows: |-

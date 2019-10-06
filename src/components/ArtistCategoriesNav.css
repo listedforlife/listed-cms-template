@@ -1,4 +1,4 @@
-.PostCategoriesNav2 {
+.ArtistCategoriesNav {
   display: flex;
   align-items: center;
   justify-content: flex-start;
@@ -6,11 +6,11 @@
   position: relative;
 }
 
-.ArtistCategories > * + * {
+.ArtistCategoriesNav > * + * {
   margin-left: 1rem;
 }
 
-.ArtistCategories input[type='text'] {
+.ArtistCategoriesNav input[type='text'] {
   right: 0;
   position: absolute;
   border: 0;
@@ -21,16 +21,16 @@
   box-shadow: 0 0 1rem rgba(0, 0, 0, 0.1);
 }
 
-.ArtistCategories input[type='text']:focus {
+.ArtistCategoriesNav input[type='text']:focus {
   outline: none;
 }
 
-.ArtistCategories input[type='text']::placeholder {
+.ArtistCategoriesNav input[type='text']::placeholder {
   color: black;
 }
 
 @media (max-width: 600px) {
-  .ArtistCategories input[type='text'] {
+  .ArtistCategoriesNav input[type='text'] {
     position: relative;
     width: 100%;
   }
