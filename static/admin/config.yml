@@ -422,21 +422,9 @@ collections: # A list of collections the CMS should be able to edit
     slug: '{{year}}-{{month}}-{{day}}-{{slug}}'
     create: true # Allow users to create new documents in this collection
     fields: # The fields each document in this collection have
-      - {label: "Display Text", name: displayText, widget: string}
-      - {label: URL, name: url, widget: string}
-      - label: "Item Type"
-        name: itemType
-        widget: select
-        options: ["Link", "Button"]
+
       - { label: Template, name: template, widget: hidden, default: ArtistPost }
       - { label: Artist Name, name: title, widget: string }
-
-      - label: 'Status'
-        name: 'status'
-        widget: 'select'
-        options: ['Published', 'Featured', 'Draft']
-        default: 'Published'
-      - { label: Date / Order, name: date, widget: date }
       - {
           label: Featured Image,
           name: featuredImage,
@@ -444,17 +432,20 @@ collections: # A list of collections the CMS should be able to edit
           required: false,
         }
       - { label: Bio, name: body, widget: markdown }
-      - label: 'poop'
-        name: 'categories'
-        widget: 'list'
-        required: false
-        fields:
-          - label: 'Category'
-            name: 'category'
-            widget: 'relation'
-            collection: 'postCategories'
-            searchFields: ['title']
-            valueField: 'title'
+      - { label: Upcoming Shows, name: upcomingshows, widget: text }
+
+      - {label: "Facebook", name: fbfav, widget: string}
+      - {label: "Instagram", name: instafav, widget: string}
+      - {label: "Twitter", name: twitterfav, widget: string}
+      - {label: Presskit, name: presskit, widget: string}
+      
+      - label: 'Status'
+        name: 'status'
+        widget: 'select'
+        options: ['Published', 'Featured', 'Draft']
+        default: 'Published'
+      - { label: Date / Order, name: date, widget: date }
+
       - label: 'Meta'
         required: false
         name: 'meta'
