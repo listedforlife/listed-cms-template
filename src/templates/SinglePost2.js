@@ -150,7 +150,7 @@ export const pageQuery = graphql`
     }
 
     allPosts: allMarkdownRemark(
-      filter: { fields: { contentType: { eq: "posts2" } } }
+      filter: { fields: { contentType: { eq: "artists" } } }
       sort: { order: DESC, fields: [frontmatter___date] }
     ) {
       edges {

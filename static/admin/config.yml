@@ -350,49 +350,6 @@ collections: # A list of collections the CMS should be able to edit
                   required: false,
                 }
 
-      - file: 'content/infoPages/artistpage.md'
-        label: 'Artist Page'
-        name: 'artist-page'
-        fields:
-          - {
-              label: Template,
-              name: template,
-              widget: hidden,
-              default: artistPage,
-            }
-          - { label: Slug, name: slug, widget: hidden, default: '' }
-          - { label: Title, name: title, widget: string }
-          - { label: Featured Image, name: featuredImage, widget: image }
-          - { label: Subtitle, name: subtitle, widget: markdown }
-          - { label: Body, name: body, widget: markdown }
-          - label: 'Meta'
-            required: false
-            name: 'meta'
-            widget: 'object'
-            fields:
-              - { label: Title, name: title, widget: string, required: false }
-              - {
-                  label: Description,
-                  name: description,
-                  widget: text,
-                  required: false,
-                }
-              - {
-                  label: Canonical Link,
-                  name: canonicalLink,
-                  widget: string,
-                  required: false,
-                }
-              - {
-                  label: Noindex,
-                  name: noindex,
-                  widget: boolean,
-                  required: false,
-                }
-
-
-
-
   - name: infoPages
     label: Info Page
     editor:
@@ -562,33 +519,11 @@ collections: # A list of collections the CMS should be able to edit
               required: false,
             }
 
-  - name: artistprofiles
-    label: Artist Profiles
+  - name: artists
+    label: Artists
     editor:
       preview: true
-    folder: content/artistProfiles
-    slug: '{{year}}-{{month}}-{{day}}-{{slug}}'
-    create: true # Allow users to create new documents in this collection
-    fields: # The fields each document in this collection have
-      - {label: changes, name: changes, widget: string}
-      - { label: Template, name: template, widget: hidden, default: ArtistProfile }
-      - { label: Artist Name, name: title, widget: string }
-      - { label: Artist Number, name: numba, widget: string }
-
-      - {
-          label: Featured Image,
-          name: featuredImage,
-          widget: image,
-          required: false,
-        }
-      - { label: Upcoming Shows, name: upcomingShows, widget: text }
-      - { label: Bio, name: bio, widget: markdown }
-      
-  - name: posts2
-    label: Post2
-    editor:
-      preview: true
-    folder: content/posts2
+    folder: content/artists
     slug: '{{year}}-{{month}}-{{day}}-{{slug}}'
     create: true # Allow users to create new documents in this collection
     fields: # The fields each document in this collection have
