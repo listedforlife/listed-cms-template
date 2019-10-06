@@ -2,10 +2,10 @@ import React from 'react'
 import { Link } from 'gatsby'
 
 import BlogSearch from './BlogSearch'
-import './PostCategoriesNav2.css'
+import './ArtistCategories.css'
 
-const PostCategoriesNav2 = ({ categories, enableSearch }) => (
-  <div className="PostCategoriesNav2">
+const ArtistCategories = ({ categories, enableSearch }) => (
+  <div className="ArtistCategories">
     <Link className="NavLink" exact="true" to={`/artists/`}>
       All
     </Link>
@@ -24,4 +24,4 @@ const PostCategoriesNav2 = ({ categories, enableSearch }) => (
   </div>
 )
 
-export default PostCategoriesNav2
+export default ArtistCategories

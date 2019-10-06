@@ -12,7 +12,7 @@ import { BlogIndexTemplate } from '../templates/BlogIndex'
 import { ArtistPageTemplate } from '../templates/ArtistPage'
 
 import { SinglePostTemplate } from '../templates/SinglePost'
-import { SinglePostTemplate2 } from '../templates/SinglePost2'
+import { ArtistPostTemplate } from '../templates/ArtistPost'
 
 
 if (
@@ -51,6 +51,6 @@ CMS.registerPreviewTemplate('posts', ({ entry }) => (
 
 
 CMS.registerPreviewTemplate('artists', ({ entry }) => (
-  <SinglePostTemplate2 {...entry.toJS().data} />
+  <ArtistPostTemplate {...entry.toJS().data} />
 ))
 
