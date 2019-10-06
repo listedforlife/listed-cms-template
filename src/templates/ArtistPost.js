@@ -3,6 +3,7 @@ import _get from 'lodash/get'
 import _format from 'date-fns/format'
 import { Link, graphql } from 'gatsby'
 import { ChevronLeft } from 'react-feather'
+import Image from '../components/Image'
 
 import Content from '../components/Content'
 import Layout from '../components/Layout'
@@ -10,12 +11,10 @@ import './ArtistPost.css'
 
 export const ArtistPostTemplate = ({
   title,
-  date,
   body,
   upcomingshows,
-  nextPostURL,
+  featuredImage,
   atURL,
-  prevPostURL,
   categories = [],
 }) => (
   <main>
@@ -30,15 +29,7 @@ export const ArtistPostTemplate = ({
         </Link>
         <div className="ArtistPost--Content relative">
           <div className="ArtistPost--Meta">
-            {date && (
-              <time
-                className="ArtistPost--Meta--Date"
-                itemProp="dateCreated pubdate datePublished"
-                date={date}
-              >
-                {_format(date, 'MMMM Do, YYYY')}
-              </time>
-            )}
+          <img src={featuredImage} alt={title} />
             {categories && (
               <Fragment>
                 <span>|</span>
@@ -61,6 +52,12 @@ export const ArtistPostTemplate = ({
               {title}
             </h1>
           )}
+
+{upcomingshows && (
+            <h1 className="ArtistPost--Title" itemProp="title">
+              {upcomingshows}
+            </h1>
+          )}
         
 
 {atURL && (
@@ -73,28 +70,7 @@ export const ArtistPostTemplate = ({
             <Content source={body} />
           </div>
 
-          <div className="ArtistPost--Pagination">
-            {prevPostURL && (
-              <Link
-                className="ArtistPost--Pagination--Link prev"
-                to={prevPostURL}
-              >
-              
-                Previous Post
-              </Link>
-              
-            )}
-            
-            {nextPostURL && (
-              <Link
-                className="ArtistPost--Pagination--Link next"
-                to={nextPostURL}
-              >
-                Next Post
-              </Link>
-            )}
-
-          </div>
+       
         </div>
       </div>
     </article>
@@ -108,7 +84,13 @@ const ArtistPost = ({ data: { post, allPosts } }) => {
     <Layout
       meta={post.frontmatter.meta || false}
       title={post.frontmatter.url || false}
-      atURL={post.frontmatter.url || false}
+      upcomingshows={post.frontmatter.upcomingshows || false}
+      fbfav={post.frontmatter.fbfav || false}
+      instafav={post.frontmatter.instafav || false}
+      twitterfav={post.frontmatter.twitterfav || false}
+      presskit={post.frontmatter.presskit || false}
+      latestmix={post.frontmatter.latestmix || false}
+
     >
                   
       <ArtistPostTemplate
@@ -119,8 +101,15 @@ const ArtistPost = ({ data: { post, allPosts } }) => {
         nextPostURL={_get(thisEdge, 'next.fields.slug')}
         prevPostURL={_get(thisEdge, 'previous.fields.slug')}
       />
-      <button  onClick={post.frontmatter.excerpt}>downlohhad link</button>
-      <a>{post.frontmatter.url}</a>
+      <a>{post.frontmatter.fbfav}</a>
+      <br/>
+      <a>{post.frontmatter.instafav}</a>
+      <br/>
+      <a>{post.frontmatter.twitterfav}</a>
+      <br/>
+      <a>{post.frontmatter.presskit}</a>
+      <br/>
+      <a>{post.frontmatter.latestmix}</a>
     </Layout>
   )
 }
@@ -139,7 +128,14 @@ export const pageQuery = graphql`
       id
       frontmatter {
         title
+        featuredImage
         template
+        fbfav
+        instafav
+        twitterfav
+        upcomingshows
+        presskit
+        latestmix
         subtitle
         excerpt
         categories {

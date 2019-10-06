@@ -10,6 +10,8 @@ fbfav: 'https://www.facebook.com/Yosei.Gorazu'
 instafav: 'https://www.facebook.com/Yosei.Gorazu'
 twitterfav: 'https://www.facebook.com/Yosei.Gorazu'
 presskit: 'https://www.facebook.com/Yosei.Gorazu'
+latestmix: 'https://www.facebook.com/Yosei.Gorazu'
+
 status: Published
 date: 2019-10-06T20:25:40.793Z
 meta:
