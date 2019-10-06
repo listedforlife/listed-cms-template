@@ -160,7 +160,7 @@ collections: # A list of collections the CMS should be able to edit
                 }
 
 
-      - file: 'content/pages/blog2.md'
+      - file: 'content/pages/artists.md'
         label: 'Blog Page'
         name: 'blog-page2'
         fields:

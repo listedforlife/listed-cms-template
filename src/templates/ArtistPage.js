@@ -4,7 +4,7 @@ import { Location } from '@reach/router'
 import qs from 'qs'
 
 import PageHeader from '../components/PageHeader'
-import PostSection from '../components/PostSection'
+import PostSection2 from '../components/PostSection2'
 import PostCategoriesNav from '../components/PostCategoriesNav'
 import Layout from '../components/Layout'
 
@@ -75,7 +75,7 @@ export const ArtistPageTemplate = ({
           {!!posts.length && (
             <section className="section">
               <div className="container">
-                <PostSection posts={filteredPosts} />
+                <PostSection2 posts={filteredPosts} />
               </div>
             </section>
           )}
