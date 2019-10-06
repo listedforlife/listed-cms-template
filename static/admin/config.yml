@@ -428,13 +428,13 @@ collections: # A list of collections the CMS should be able to edit
         name: itemType
         widget: select
         options: ["Link", "Button"]
-      - { label: Template, name: template, widget: hidden, default: SinglePost }
-      - { label: Title, name: title, widget: string }
+      - { label: Template, name: template, widget: hidden, default: ArtistPost }
+      - { label: Artist Name, name: title, widget: string }
 
       - label: 'Status'
         name: 'status'
         widget: 'select'
-        options: ['Published', 'Featured', 'Draft', 'Button']
+        options: ['Published', 'Featured', 'Draft']
         default: 'Published'
       - { label: Date / Order, name: date, widget: date }
       - {
@@ -443,8 +443,7 @@ collections: # A list of collections the CMS should be able to edit
           widget: image,
           required: false,
         }
-      - { label: excerpt, name: excerpt, widget: text }
-      - { label: Content, name: body, widget: markdown }
+      - { label: Bio, name: body, widget: markdown }
       - label: 'poop'
         name: 'categories'
         widget: 'list'
