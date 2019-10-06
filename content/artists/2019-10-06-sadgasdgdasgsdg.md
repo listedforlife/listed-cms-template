@@ -1,12 +1,17 @@
 ---
-displayText: asgdasg
-url: sadgsadgdsa
-itemType: Link
 template: SinglePost
 title: sadgasdgdasgsdg
+featuredImage: 'https://ucarecdn.com/895426fd-39d7-4349-981f-1699c3ee410c/'
+upcomingshows: |-
+  asdfsadfsadfsad ads 
+  safsad
+  a
+fbfav: 'https://www.facebook.com/Yosei.Gorazu'
+instafav: 'https://www.facebook.com/Yosei.Gorazu'
+twitterfav: 'https://www.facebook.com/Yosei.Gorazu'
+presskit: 'https://www.facebook.com/Yosei.Gorazu'
 status: Published
 date: 2019-10-06T20:25:40.793Z
-featuredImage: 'https://ucarecdn.com/895426fd-39d7-4349-981f-1699c3ee410c/'
 meta:
   canonicalLink: sadgasdg
   description: asdgdsag
