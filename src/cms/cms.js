@@ -9,7 +9,7 @@ import { ProductionsPageTemplate } from '../templates/ProductionsPage'
 import { ContactPageTemplate } from '../templates/ContactPage'
 
 import { BlogIndexTemplate } from '../templates/BlogIndex'
-import { BlogIndexTemplate2 } from '../templates/BlogIndex2'
+import { ArtistPageTemplate } from '../templates/ArtistPage'
 
 import { SinglePostTemplate } from '../templates/SinglePost'
 import { SinglePostTemplate2 } from '../templates/SinglePost2'
@@ -42,7 +42,7 @@ CMS.registerPreviewTemplate('blog-page', ({ entry }) => (
 ))
 
 CMS.registerPreviewTemplate('blog-page2', ({ entry }) => (
-  <BlogIndexTemplate2 {...entry.toJS().data} />
+  <ArtistPageTemplate {...entry.toJS().data} />
 ))
 
 CMS.registerPreviewTemplate('posts', ({ entry }) => (

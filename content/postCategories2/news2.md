@@ -1,5 +1,5 @@
 ---
-template: BlogIndex2
+template: ArtistPage
 title: News
 subtitle: ''
 featuredImage: >-

@@ -1,5 +1,5 @@
 ---
-template: BlogIndex2
+template: ArtistPage
 slug: blog2
 title: Blog Page2
 featuredImage: 'https://ucarecdn.com/1ad727b2-5db5-41b9-a4db-05f26e34f273/'
