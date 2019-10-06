@@ -303,7 +303,7 @@ collections: # A list of collections the CMS should be able to edit
                   required: false,
                 }
 
-                      - file: 'content/pages/home2.md'
+      - file: 'content/pages/home2.md'
         label: 'Home Page2'
         name: 'home-page2'
         fields:
@@ -350,7 +350,7 @@ collections: # A list of collections the CMS should be able to edit
                   required: false,
                 }
 
-                - file: 'content/infoPages/artistpage.md'
+      - file: 'content/infoPages/artistpage.md'
         label: 'Artist Page'
         name: 'artist-page'
         fields:
@@ -365,9 +365,6 @@ collections: # A list of collections the CMS should be able to edit
           - { label: Featured Image, name: featuredImage, widget: image }
           - { label: Subtitle, name: subtitle, widget: markdown }
           - { label: Body, name: body, widget: markdown }
-            fields:
-              - { label: 'Title', name: 'title', widget: 'string' }
-              - { label: Content, name: content, widget: text }
           - label: 'Meta'
             required: false
             name: 'meta'
@@ -587,7 +584,7 @@ collections: # A list of collections the CMS should be able to edit
       - { label: Upcoming Shows, name: upcomingShows, widget: text }
       - { label: Bio, name: bio, widget: markdown }
       
- - name: posts2
+  - name: posts2
     label: Post2
     editor:
       preview: true
