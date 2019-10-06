@@ -1,9 +1,9 @@
 import React from 'react'
 
-import ArtistCard from '../components/ArtistCard'
-import './ArtistSection.css'
+import PostCard2 from '../components/PostCard2'
+import './PostSection2.css'
 
-class ArtistSection extends React.Component {
+class PostSection2 extends React.Component {
   static defaultProps = {
     posts: [],
     title: '',
@@ -28,15 +28,13 @@ class ArtistSection extends React.Component {
       visiblePosts = posts.slice(0, limit || posts.length)
 
     return (
-      <div className="ArtistSection">
-                 hjhj
-        {title && <h2 className="ArtistSection--Title">{title}</h2>}
+      <div className="PostSection2">
+        {title && <h2 className="PostSection2--Title">{title}</h2>}
         {!!visiblePosts.length && (
-          <div className="ArtistSection--Grid">
+          <div className="PostSection2--Grid">
             {visiblePosts.map((post, index) => (
-              <ArtistCard key={post.title + index} {...post} />
+              <PostCard2 key={post.title + index} {...post} />
             ))}
-   
           </div>
         )}
         {showLoadMore && visiblePosts.length < posts.length && (
@@ -51,4 +49,4 @@ class ArtistSection extends React.Component {
   }
 }
 
-export default ArtistSection
+export default PostSection2

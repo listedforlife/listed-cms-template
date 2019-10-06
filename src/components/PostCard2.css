@@ -1,0 +1,39 @@
+.PostCard2 {
+    text-decoration: none;
+    text-align: center;
+    background: rgb(0, 0, 0);
+    color: inherit;
+    border: 14px solid rgb(16, 16, 16);
+    border-radius: var(--borderRadius);
+    box-shadow: 0 6px 30px rgba(255, 255, 255, 0.1);
+    transition: all 0.15s ease-in-out;
+    overflow: hidden;
+  }
+  
+  .PostCard2:hover,
+  .PostCard2:focus {
+    transform: translateY(-1px);
+    box-shadow: 0 2px 30px rgba(0, 0, 0, 0.15);
+  }
+  
+  .PostCard2--Image {
+    margin: 0 0 2rem 0;
+    width: 100%;
+    height: 20rem;
+  }
+  
+  .PostCard2--Title {
+    margin: 0;
+  }
+  
+  .PostCard2--Content {
+    padding: 0 2.5rem 2.5rem;
+  }
+  
+  .PostCard2--Category {
+    font-size: 1.2rem;
+    min-height: 1.2em;
+    line-height: 1;
+    margin: 0.5em 0;
+  }
+  

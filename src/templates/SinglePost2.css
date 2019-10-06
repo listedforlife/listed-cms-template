@@ -1,0 +1,79 @@
+.SinglePost2 {
+    background: black;
+  }
+  
+  .SinglePost2--BackButton {
+    color: white;
+    position: relative;
+    display: flex;
+    align-items: center;
+    font-weight: 600;
+    text-decoration: none;
+    letter-spacing: 0.1em;
+  }
+  
+  .SinglePost2--BackButton svg {
+    transition: transform 0.2s ease-out;
+    transform: translateX(0);
+    height: 1.2em;
+  }
+  
+  .SinglePost2--BackButton:hover svg,
+  .SinglePost2--BackButton:focus svg {
+    transform: translateX(-0.25em);
+  }
+  
+  .SinglePost2--Content {
+    background: rgb(0, 0, 0);
+    padding: 8rem 8rem 4rem 18rem;
+  }
+  
+  @media screen and (max-width: 750px) {
+    .SinglePost--Content {
+      padding: 4rem 2rem;
+    }
+  }
+  
+  .SinglePost2--Meta {
+    font-size: 1rem;
+    margin: 0 0 2rem 0;
+    text-align: center;
+  }
+  
+  .SinglePost2--Meta > * + * {
+    margin-left: 0.75em;
+  }
+  
+  .SinglePost2--Title {
+    text-align: center;
+    line-height: 1.2;
+  }
+  
+  .SinglePost2--InnerContent {
+    padding: 0 8rem;
+  }
+  
+  @media screen and (max-width: 750px) {
+    .SinglePost2--InnerContent {
+      padding: 0;
+    }
+  }
+  
+  .SinglePost2--Pagination {
+    margin: 4rem 0 0 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .SinglePost2--Pagination--Link {
+    text-transform: uppercase;
+    font-size: 1.2rem;
+    font-weight: 600;
+    text-decoration: none;
+  }
+  
+  .SinglePost2--Pagination--Link.next {
+    margin-left: auto;
+  }
+  

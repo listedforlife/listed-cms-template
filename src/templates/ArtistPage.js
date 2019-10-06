@@ -92,7 +92,9 @@ export const DefaultPageTemplate = ({
 const ArtistPage = ({ data: { page, artistProfiles } }) => (
     <Layout
       meta={page.frontmatter.meta || false}
-      title={page.frontmatter.title || false}>
+      title={page.frontmatter.title || false}
+      
+      >
   
       <DefaultPageTemplate
   
@@ -105,8 +107,7 @@ const ArtistPage = ({ data: { page, artistProfiles } }) => (
           ...post.node.frontmatter,
           ...post.node.fields
         }))}
-
-        
+  
       />
       <div style={{textAlign:'center'}}>
         
@@ -152,13 +153,30 @@ query artistPage($id: String!) {
         }
         frontmatter {
           title
-          bio
+          date
+          categories {
+            category
+          }
           featuredImage
         }
       }
     }
   }
-  
+  postCategories: allMarkdownRemark(
+    filter: { fields: { contentType: { eq: "postCategories" } } }
+    sort: { order: ASC, fields: [frontmatter___title] }
+  ) {
+    edges {
+      node {
+        fields {
+          slug
+        }
+        frontmatter {
+          title
+        }
+      }
+    }
+  }
 }
 `
 
