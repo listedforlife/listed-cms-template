@@ -97,10 +97,10 @@ const HomePage = ({ data: { page, posts, postCategories } }) => (
   <Layout
     meta={page.frontmatter.meta || false}
     title={page.frontmatter.title || false}>
-       <div class='slider'>
-  <div class='slide1'></div>
-  <div class='slide2'></div>
-  <div class='slide3'></div>
+       <div className='slider'>
+  <div className='slide1'></div>
+  <div className='slide2'></div>
+  <div className='slide3'></div>
 </div>
 <div style={{paddingLeft:'45px', margin:'15px', marginBottom:'-80px', fontSize:'25px'}}> Latest News</div>
 
