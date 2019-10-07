@@ -5,6 +5,7 @@ import qs from 'qs'
 import Content from '../components/Content'
 import PostSection from '../components/PostSection'
 import Layout from '../components/Layout'
+import './HomePage.css'
 
 /**
  * Filter posts by date. Feature dates will be fitered
@@ -39,6 +40,7 @@ export const HomePageTemplate = ({
   subtitle,
   featuredImage,
   posts = [],
+  date,
   postCategories = [],
   enableSearch = true,
   contentType
@@ -69,6 +71,7 @@ export const HomePageTemplate = ({
 <section className="section">
       <div className="container">
         <Content source={body} />
+        
       </div>
     </section>
 
@@ -94,6 +97,11 @@ const HomePage = ({ data: { page, posts, postCategories } }) => (
   <Layout
     meta={page.frontmatter.meta || false}
     title={page.frontmatter.title || false}>
+       <div class='slider'>
+  <div class='slide1'></div>
+  <div class='slide2'></div>
+  <div class='slide3'></div>
+</div>
 <div style={{paddingLeft:'45px', margin:'15px', marginBottom:'-80px', fontSize:'25px'}}> Latest News</div>
 
     <HomePageTemplate
@@ -144,6 +152,7 @@ export const pageQuery = graphql`
       frontmatter {
         title
         excerpt
+        date
         template
         subtitle
         featuredImage

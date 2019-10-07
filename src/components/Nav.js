@@ -3,6 +3,7 @@ import { Location } from '@reach/router'
 import { Link } from 'gatsby'
 import { Menu, X } from 'react-feather'
 import Logo from './Logo'
+import { SocialIcon } from 'react-social-icons';
 
 import './Nav.css'
 
@@ -84,7 +85,7 @@ export class Navigation extends Component {
                 ))}
               </div>
             </div>
-            <NavLink to="/contact/">Contact</NavLink>
+            <NavLink to="/contact/" style={{marginLeft:'-10px'}}>Contact</NavLink>
           </div>
           <button
             className="Button-blank Nav--MenuButton"
@@ -94,6 +95,19 @@ export class Navigation extends Component {
             {active ? <X /> : <Menu />}
           </button>
         </div>
+        <div className="smedialinks">
+        <a style={{opacity:'0.9', float:'right', marginBottom:'30px', marginRight:'69px', marginTop:'-44px'}}>
+      <span style={{margin:'5px'}}>
+      <SocialIcon url="http://facebook.com/jaketrent"  style={{ height: 25, width: 25 }} />
+      </span>
+      <span style={{margin:'5px'}}>
+      <SocialIcon url="http://instagram.com/jaketrent"  style={{ height: 25, width: 25 }} />
+      </span>
+      <span style={{margin:'5px'}}>
+      <SocialIcon  url="http://twitter.com/jaketrent"  style={{ height: 25, width: 25, }} />
+      </span>
+      </a>
+      </div>
       </nav>
     )
   }

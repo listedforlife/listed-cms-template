@@ -64,13 +64,7 @@ export const ArtistPageTemplate = ({
       return (
         <main className="Blog">
 
-          {!!postCategories2.length && (
-            <section className="section thin">
-              <div className="container">
-                <ArtistCategoriesNav enableSearch categories={postCategories2} />
-              </div>
-            </section>
-          )}
+        
 
           {!!posts.length && (
             <section className="section">
@@ -91,6 +85,7 @@ const ArtistPage = ({ data: { page, posts, postCategories2 } }) => (
     meta={page.frontmatter.meta || false}
     title={page.frontmatter.title || false}
   >
+    Roster
     <ArtistPageTemplate
       {...page}
       {...page.fields}
