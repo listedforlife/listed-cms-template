@@ -96,7 +96,7 @@ export class Navigation extends Component {
           </button>
         </div>
         <div className="smedialinks">
-        <a style={{opacity:'0.9', float:'right', marginBottom:'30px', marginRight:'69px', marginTop:'-44px'}}>
+        <div style={{opacity:'0.9', float:'right', marginBottom:'30px', marginRight:'69px', marginTop:'-44px'}}>
       <span style={{margin:'5px'}}>
       <SocialIcon url="http://facebook.com/jaketrent"  style={{ height: 25, width: 25 }} />
       </span>
@@ -106,7 +106,7 @@ export class Navigation extends Component {
       <span style={{margin:'5px'}}>
       <SocialIcon  url="http://twitter.com/jaketrent"  style={{ height: 25, width: 25, }} />
       </span>
-      </a>
+      </div>
       </div>
       </nav>
     )

@@ -16,8 +16,6 @@ meta:
   title: Contact Page
 ---
 
-# Contact Form
-
-Please get in touch with us for all general inquiries.
+# Contact Us
 
 Find out more in the [Netlify Docs](https://www.netlify.com/docs/form-handling/).

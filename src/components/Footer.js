@@ -9,7 +9,7 @@ export default () => (
     <h2 className="taCenter" style={{margin:'14px'}}>
       <br>
       </br>
-      <a>
+      <div>
       <span style={{margin:'5px'}}>
       <SocialIcon  url="http://twitter.com/jaketrent" />
       </span>
@@ -22,7 +22,7 @@ export default () => (
       <span style={{margin:'5px'}}>
       <SocialIcon url="mailto:webmaster@example.com" />
       </span>
-      </a>
+      </div>
     </h2>
     <br />
     <InstagramFeed count="8" />
