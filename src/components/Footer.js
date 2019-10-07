@@ -11,13 +11,13 @@ export default () => (
       </br>
       <div>
       <span style={{margin:'5px'}}>
-      <SocialIcon  url="http://twitter.com/jaketrent" />
+      <SocialIcon  url="https://twitter.com/jaketrent" />
       </span>
       <span style={{margin:'5px'}}>
-      <SocialIcon url="http://facebook.com/jaketrent" />
+      <SocialIcon url="https://facebook.com/jaketrent" />
       </span>
       <span style={{margin:'5px'}}>
-      <SocialIcon url="http://instagram.com/jaketrent" />
+      <SocialIcon url="https://instagram.com/jaketrent" />
       </span>
       <span style={{margin:'5px'}}>
       <SocialIcon url="mailto:webmaster@example.com" />

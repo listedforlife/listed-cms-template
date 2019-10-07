@@ -98,13 +98,13 @@ export class Navigation extends Component {
         <div className="smedialinks">
         <div style={{opacity:'0.9', float:'right', marginBottom:'30px', marginRight:'69px', marginTop:'-44px'}}>
       <span style={{margin:'5px'}}>
-      <SocialIcon url="http://facebook.com/jaketrent"  style={{ height: 25, width: 25 }} />
+      <SocialIcon url="https://facebook.com/jaketrent"  style={{ height: 25, width: 25 }} />
       </span>
       <span style={{margin:'5px'}}>
-      <SocialIcon url="http://instagram.com/jaketrent"  style={{ height: 25, width: 25 }} />
+      <SocialIcon url="https://instagram.com/jaketrent"  style={{ height: 25, width: 25 }} />
       </span>
       <span style={{margin:'5px'}}>
-      <SocialIcon  url="http://twitter.com/jaketrent"  style={{ height: 25, width: 25, }} />
+      <SocialIcon  url="https://twitter.com/jaketrent"  style={{ height: 25, width: 25, }} />
       </span>
       </div>
       </div>
