@@ -25,7 +25,7 @@ export const ArtistPostTemplate = ({
     >
       <div className="container skinny">
         <Link className="ArtistPost--BackButton" to="/artists/">
-          <ChevronLeft /> BACKasd
+          <ChevronLeft /> BACKasds
         </Link>
         <div className="ArtistPost--Content relative">
           <div className="ArtistPost--Meta">
