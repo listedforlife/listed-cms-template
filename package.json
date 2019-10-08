@@ -55,7 +55,7 @@
     "react-responsive-carousel": "^3.1.50",
     "react-soundcloud": "^0.1.1",
     "react-soundcloud-embed": "^1.0.3",
-    "sharp": "^0.23.1"
+    "npm":"6.11.3"
   },
   "keywords": [
     "gatsby"
@@ -66,6 +66,7 @@
     "start": "npm run clean && npm run develop",
     "build": "gatsby build",
     "develop": "gatsby develop",
+    "preinstall": "npm install -g sharp",
     "clean": "rm -rf .cache public",
     "serve": "gatsby serve",
     "format": "prettier --trailing-comma es5 --no-semi --single-quote --write \"{gatsby-*.js,src/**/*.js}\"",
@@ -77,3 +78,4 @@
     "react-social-icons": "^4.1.0"
   }
 }
+
