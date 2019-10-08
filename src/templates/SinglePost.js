@@ -25,7 +25,7 @@ export const SinglePostTemplate = ({
     >
       <div className="container skinny">
         <Link className="SinglePost--BackButton" to="/blog/">
-          <ChevronLeft /> BACKj
+          <ChevronLeft /> BACKjs
         </Link>
         <div className="SinglePost--Content relative">
           <div className="SinglePost--Meta">
